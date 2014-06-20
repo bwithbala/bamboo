@@ -104,10 +104,14 @@ var oFeedList = new sap.m.List("oFeedItemList", {
         		
         		var HtmlIFrame = new sap.ui.core.HTML({
       			  content:
-      			          "<div id='siteloader'></div>" 
+      			       //   "<div id='siteloader'></div>" 
+      				 "<div>" + 
+        	    "<object type='text/html' data='http://www.maalaimalar.com' width='800px' height='600px'" +
+        	    	"style='overflow:auto;border:5px ridge blue'>" +
+        	    "</object></div>"
       		});	                    		
         		
-        		$("#siteloader").html('<object data="http://www.maalaimalar.com" />');        		
+        		//$("#siteloader").html('<object data="http://www.maalaimalar.com" />');        		
         		newsPage.addContent(HtmlIFrame);
 	}
 //showSeparators: "None",
