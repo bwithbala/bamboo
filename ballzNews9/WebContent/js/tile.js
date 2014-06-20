@@ -106,15 +106,17 @@ var oFeedList = new sap.m.List("oFeedItemList", {
         		});	      */      
         		
        		var HtmlIFrame = new sap.ui.core.HTML({
+       			  preferDOM: true,
       			  content:
       			       //   "<div id='siteloader'></div>" 
-      				 "<div style='overflow-y: scroll'>" + 
+      				 "<div style='overflow: scroll'>" + 
         	    "<object type=\"text/html\" data=\"http://www.maalaimalar.com\" width=\"800px\" height=\"600px\"" +
-        	    	"style=\"overflow-y: scroll;border:0px \">" +
+        	    	"style=\"overflow: scroll;border:0px \">" +
         	    "</object></div>"
       		});	         
         		
         		var oHTML = new sap.ui.core.HTML("contentCtrl", {	
+        			preferDOM: true,
         			content: "<div id=\"diviframe\"><iframe id=\"iframeiframe\" src=\"http://www.sap.com/\" ></iframe></div>" });        		
         		
         		//$("#siteloader").html('<object data="http://www.maalaimalar.com" />');        		
