@@ -102,17 +102,34 @@ var oFeedList = new sap.m.List("oFeedItemList", {
         			          + "</iframe>" 
         		});	      */      
         		
-        		var HtmlIFrame = new sap.ui.core.HTML({
+/*        		var HtmlIFrame = new sap.ui.core.HTML({
       			  content:
       			       //   "<div id='siteloader'></div>" 
       				 "<div>" + 
         	    "<object type='text/html' data='http://www.maalaimalar.com' width='800px' height='600px'" +
         	    	"style='overflow:auto;border:5px ridge blue'>" +
         	    "</object></div>"
-      		});	                    		
+      		});	    */     
+        		
+        		var oHTML = new sap.ui.core.HTML("contentCtrl", {	
+        			content: "<div id=\"diviframe\"><iframe id=\"iframeiframe\" src=\"http://www.sap.com/\" ></iframe></div>" });        		
         		
         		//$("#siteloader").html('<object data="http://www.maalaimalar.com" />');        		
-        		newsPage.addContent(HtmlIFrame);
+        		newsPage.addContent(oHTML);
+        		
+        		$(window).resize( function () {
+        			var iWidth = $("#diviframe").width();
+        			var iHeight = $(window).height();
+        			
+        			$("#iframeiframe").width(iWidth - 4);
+        			$("#iframeiframe").height(iHeight - 200);		
+        	}).resize();
+
+        	$(document).ready( function() {
+        			$(window).resize();
+        		}
+        	);        		
+        		
 	}
 //showSeparators: "None",
 });
