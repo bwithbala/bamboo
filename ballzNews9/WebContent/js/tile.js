@@ -91,7 +91,7 @@ var oFeedList = new sap.m.List("oFeedItemList", {
     			  content:
     			         
     				 "<div style='overflow: scroll'>" + 
-      	    "<object type=\"text/html\" data=\"http://www.maalaimalar.com\" width=\"800px\" height=\"600px\"" +
+      	    "<object type=\"text/html\" data=\"http://www.maalaimalar.com\" width=\"300px\" height=\"300px\"" +
       	    	"style=\"overflow: scroll;border:0px \">" +
       	    "</object></div>"
     		});	             
