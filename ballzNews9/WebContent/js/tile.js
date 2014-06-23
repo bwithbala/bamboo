@@ -97,14 +97,15 @@ var oFeedList = new sap.m.List("oFeedItemList", {
         		
         		var HtmlIFrame = new sap.ui.core.HTML({
         			  content:
-        				    "<div style='overflow:scroll;'" + strConcat + ">"  +
         			          "<iframe src=" + link 
         			       + strConcat
         			         //"height=500px width=1200px>" 
         			      //  +  style
         			        + scrolling  
-        			          + "</iframe>" +
-        			          "</div>"
+        			        + ">" +
+        			        "<div style='overflow:scroll;'>" +
+        			        "</div>"
+        			          + "</iframe>"
         		});	          
         		
        		/*var HtmlIFrame = new sap.ui.core.HTML({
