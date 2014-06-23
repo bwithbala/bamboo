@@ -477,7 +477,7 @@ var newsPage = new sap.m.Page("newsPage", {
 			newsLink += ", from page 3: " + evt.backData.myBackPayload;
 		}
 		//alert("Link Passed from Page 1:" + newsLink);
-		sap.m.URLHelper.redirect(newsLink,true);
+		//sap.m.URLHelper.redirect(newsLink,true);
 	}
 });
 
