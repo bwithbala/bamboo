@@ -109,7 +109,8 @@ var oFeedList = new sap.m.List("oFeedItemList", {
         				  
         				  "<iframe src=" +
         				  link +
-        				  "width=\"200\" height=\"500\" scrolling=\"yes\"> </iframe>"
+        				  //"width=\"200\" height=\"500\" " +
+        				  "scrolling=\"yes\"> </iframe>"
         		});	          
         		
        		/*var HtmlIFrame = new sap.ui.core.HTML({
