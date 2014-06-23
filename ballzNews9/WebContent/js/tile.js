@@ -86,12 +86,15 @@ var oFeedList = new sap.m.List("oFeedItemList", {
      		var link = str.concat(selectedInfo); 
      		link = link.concat(str);	     	 
 	     	 
-	     	var HtmlIFrame = new sap.ui.core.HTML({
-  			  content:	     
-				  "<iframe src=" +
-				  link +
-				  "> </iframe>"
-		});	          
+       		var HtmlIFrame = new sap.ui.core.HTML({
+     			  preferDOM: true,
+    			  content:
+    			         
+    				 "<div style='overflow: scroll'>" + 
+      	    "<object type=\"text/html\" data=\"http://www.maalaimalar.com\" width=\"800px\" height=\"600px\"" +
+      	    	"style=\"overflow: scroll;border:0px \">" +
+      	    "</object></div>"
+    		});	             
 	     	 
 	     	var scr1 = new sap.m.ScrollContainer({
 				horizontal: true,
@@ -134,15 +137,7 @@ var oFeedList = new sap.m.List("oFeedItemList", {
         				  "scrolling=\"yes\"> </iframe>"
         		});	          
         		
-       		var HtmlIFrame = new sap.ui.core.HTML({
-       			  preferDOM: true,
-      			  content:
-      			        //"<div id='siteloader' style='overflow:scroll;'></div>"  
-      				 "<div style='overflow: scroll'>" + 
-        	    "<object type=\"text/html\" data=\"http://www.maalaimalar.com\" width=\"800px\" height=\"600px\"" +
-        	    	"style=\"overflow: scroll;border:0px \">" +
-        	    "</object></div>"
-      		});	         
+ 
         		
         		var oHTML = new sap.ui.core.HTML("contentCtrl", {	
         			preferDOM: true,
