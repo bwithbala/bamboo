@@ -128,7 +128,7 @@ var oFeedList = new sap.m.List("oFeedItemList", {
         			content: "<div id=\"diviframe\" style=\"overflow: scroll\"><iframe id=\"iframeiframe\" src=\"http://www.maalaimalar.com\" ></iframe></div>" });        		
         		
         	//	$("#siteloader").html('<object data="http://www.maalaimalar.com" />');        		
-        		newsPage.addContent(HtmlIFrame);
+        	//	newsPage.addContent(HtmlIFrame);
         		
 /*        		$(window).resize( function () {
         			var iWidth = $("#diviframe").width();
@@ -461,7 +461,7 @@ var newsPage = new sap.m.Page("newsPage", {
 			newsLink += ", from page 3: " + evt.backData.myBackPayload;
 		}
 		//alert("Link Passed from Page 1:" + newsLink);
-		//sap.m.URLHelper.redirect(newsLink);
+		sap.m.URLHelper.redirect(newsLink,false);
 	}
 });
 
