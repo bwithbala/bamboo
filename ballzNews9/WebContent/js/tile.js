@@ -81,15 +81,36 @@ var oFeedList = new sap.m.List("oFeedItemList", {
 	     //	sap.m.URLHelper.redirect(selectedInfo);
 	     	
 	     	 appFeedList.to("newsPage", {payloadInfo:selectedInfo});
+	     	 
+	     	var str = "'";
+     		var link = str.concat(selectedInfo); 
+     		link = link.concat(str);	     	 
+	     	 
+	     	var HtmlIFrame = new sap.ui.core.HTML({
+  			  content:	     
+  				 "<iframe src=" +
+				  link +
+				  "</iframe>"
+		});	          
+	     	 
+	     	var scr1 = new sap.m.ScrollContainer({
+				horizontal: true,
+				vertical: true,
+				content:[HtmlIFrame],
+				height: "500px",
+				width: "400px"
+			}); 	     	 
+	     	 
+	     	newsPage.addContent(scr1);
 
-        		var str = "'";
+ /*       		var str = "'";
         		var link = str.concat(selectedInfo); 
         		link = link.concat(str);
         		
-        		/*var ow = window.outerWidth; //including toolbars and status bar etc.
+        		var ow = window.outerWidth; //including toolbars and status bar etc.
         		alert("outer Width " + ow);
         		var oh = window.outerHeight;
-        		alert("outer Height " + oh);*/
+        		alert("outer Height " + oh);
         		//alert("Link: " +link);
         		
         		var scrolling = "scrolling=yes";
@@ -97,7 +118,7 @@ var oFeedList = new sap.m.List("oFeedItemList", {
         		
         		var HtmlIFrame = new sap.ui.core.HTML({
         			  content:
-/*        			          "<iframe src=" + link 
+        			          "<iframe src=" + link 
         			      // + strConcat
         			         //"height=500px width=1200px>" 
         			      //  +  style
@@ -105,7 +126,7 @@ var oFeedList = new sap.m.List("oFeedItemList", {
         			        + ">" +
         			        "<div style='overflow:scroll;'>" +
         			        "</div>"
-        			          + "</iframe>"*/
+        			          + "</iframe>"
         				  
         				  "<iframe src=" +
         				  link +
@@ -113,7 +134,7 @@ var oFeedList = new sap.m.List("oFeedItemList", {
         				  "scrolling=\"yes\"> </iframe>"
         		});	          
         		
-       		/*var HtmlIFrame = new sap.ui.core.HTML({
+       		var HtmlIFrame = new sap.ui.core.HTML({
        			  preferDOM: true,
       			  content:
       			        //"<div id='siteloader' style='overflow:scroll;'></div>"  
@@ -121,11 +142,11 @@ var oFeedList = new sap.m.List("oFeedItemList", {
         	    "<object type=\"text/html\" data=\"http://www.maalaimalar.com\" width=\"800px\" height=\"600px\"" +
         	    	"style=\"overflow: scroll;border:0px \">" +
         	    "</object></div>"
-      		});	   */      
+      		});	         
         		
         		var oHTML = new sap.ui.core.HTML("contentCtrl", {	
         			preferDOM: true,
-        			content: "<div id=\"diviframe\" style=\"overflow: scroll\"><iframe id=\"iframeiframe\" src=\"http://www.maalaimalar.com\" ></iframe></div>" });        		
+        			content: "<div id=\"diviframe\" style=\"overflow: scroll\"><iframe id=\"iframeiframe\" src=\"http://www.maalaimalar.com\" ></iframe></div>" });  */      		
         		
         	//	$("#siteloader").html('<object data="http://www.maalaimalar.com" />');        		
         	//	newsPage.addContent(HtmlIFrame);
@@ -461,7 +482,7 @@ var newsPage = new sap.m.Page("newsPage", {
 			newsLink += ", from page 3: " + evt.backData.myBackPayload;
 		}
 		//alert("Link Passed from Page 1:" + newsLink);
-		sap.m.URLHelper.redirect(newsLink,false);
+		sap.m.URLHelper.redirect(newsLink,true);
 	}
 });
 
