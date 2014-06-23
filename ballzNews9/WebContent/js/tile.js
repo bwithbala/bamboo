@@ -95,17 +95,17 @@ var oFeedList = new sap.m.List("oFeedItemList", {
         		var scrolling = "scrolling=yes";
         		var style     = "class='noScrolling'";
         		
-/*        		var HtmlIFrame = new sap.ui.core.HTML({
+        		var HtmlIFrame = new sap.ui.core.HTML({
         			  content:
         			          "<iframe src=" + link 
-        			       // + strConcat
+        			       + strConcat
         			         //"height=500px width=1200px>" 
         			      //  +  style
-        			        //  + scrolling  
+        			        + scrolling  
         			          + "</iframe>" 
-        		});	      */      
+        		});	          
         		
-       		var HtmlIFrame = new sap.ui.core.HTML({
+       		/*var HtmlIFrame = new sap.ui.core.HTML({
        			  preferDOM: true,
       			  content:
       			        //"<div id='siteloader' style='overflow:scroll;'></div>"  
@@ -113,14 +113,14 @@ var oFeedList = new sap.m.List("oFeedItemList", {
         	    "<object type=\"text/html\" data=\"http://www.maalaimalar.com\" width=\"800px\" height=\"600px\"" +
         	    	"style=\"overflow: scroll;border:0px \">" +
         	    "</object></div>"
-      		});	         
+      		});	   */      
         		
         		var oHTML = new sap.ui.core.HTML("contentCtrl", {	
         			preferDOM: true,
         			content: "<div id=\"diviframe\" style=\"overflow: scroll\"><iframe id=\"iframeiframe\" src=\"http://www.maalaimalar.com\" ></iframe></div>" });        		
         		
         	//	$("#siteloader").html('<object data="http://www.maalaimalar.com" />');        		
-        		newsPage.addContent(oHTML);
+        		newsPage.addContent(HtmlIFrame);
         		
 /*        		$(window).resize( function () {
         			var iWidth = $("#diviframe").width();
