@@ -90,7 +90,7 @@ var oFeedList = new sap.m.List("oFeedItemList", {
   			  content:	     
 				  "<iframe src=" +
 				  link +
-				  //"width=\"200\" height=\"500\" " +
+				 "width=\"200\" height=\"500\" " +
 				  "scrolling=\"yes\"> </iframe>"
 		});	          
 	     	 
@@ -465,7 +465,7 @@ var newsPage = new sap.m.Page("newsPage", {
 	navButtonText: "Page 1",
 	navButtonPress: function(){ appFeedList.back(); },
 	//icon: "images/SAPUI5.jpg",
-	enableScrolling: true,
+	enableScrolling: false,
 	content : [
 				
 	           
