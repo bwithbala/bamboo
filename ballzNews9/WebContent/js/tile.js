@@ -90,8 +90,7 @@ var oFeedList = new sap.m.List("oFeedItemList", {
   			  content:	     
 				  "<iframe src=" +
 				  link +
-				  strConcat +
-				  "scrolling=\"yes\"> </iframe>"
+				  "> </iframe>"
 		});	          
 	     	 
 	     	var scr1 = new sap.m.ScrollContainer({
