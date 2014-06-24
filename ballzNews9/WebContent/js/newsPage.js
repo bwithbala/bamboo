@@ -1,3 +1,6 @@
+
+alert("Adding News Page");
+
 var newsPage = new sap.m.Page("newsPage", {
 	title:" ",
 	showNavButton: true,
@@ -29,12 +32,7 @@ var newsPage = new sap.m.Page("newsPage", {
 });
 
 
-var appNews = new sap.m.App("myNewsApp", {
-	//initialPage : "News Page",
-	//BackgroundColor: "green",
-});
-
-appNews.addPage(newsPage);
-appNews.placeAt("contentsecond");
+appFeedList.addPage(newsPage);
+appFeedList.placeAt("contentsecond");
 
 //newsPage.placeAt("contentsecond");
