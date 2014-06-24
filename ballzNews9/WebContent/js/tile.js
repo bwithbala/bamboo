@@ -490,4 +490,5 @@ var butBack = new sap.m.Button({
 newsPage.placeAt("contentsecond");*/
 
 //appFeedList.addPage(feedListPage).addPage(newsPage);
-//appFeedList.placeAt("content");
+appFeedList.addPage(feedListPage);
+appFeedList.placeAt("content");

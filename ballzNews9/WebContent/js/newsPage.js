@@ -28,4 +28,7 @@ var newsPage = new sap.m.Page("newsPage", {
 	}
 });
 
-newsPage.placeAt("contentsecond");
+appFeedList.addPage(feedListPage);
+appFeedList.placeAt("contentsecond");
+
+//newsPage.placeAt("contentsecond");
