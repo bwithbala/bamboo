@@ -27,13 +27,21 @@
 </head>
 
  <script>
-      var iframe = document.getElementByName("iframe_a");
+ 
+	 var backButton = new sap.m.Button({text:"Back", type:sap.m.ButtonType.Back,
+		  press: function{
+			  window.location.replace("index.html");
+		  }});
+	 backButton.placeAt(backButton); 
+ 
+      var iframe = document.createElement('iframe');
       iframe.src = 'http://www.maalaimalar.com';
+      document.body.appendChild(iframe);
+      
 </script>
 
 <body class="sapUiBody" role="application">
 	<div id="backButton"></div>
-	<iframe name="iframe_a" width="300" height="500"></iframe>
 </body>
 
 </html>	
