@@ -28,7 +28,13 @@ var newsPage = new sap.m.Page("newsPage", {
 	}
 });
 
-appFeedList.addPage(feedListPage);
-appFeedList.placeAt("contentsecond");
+
+var appNews = new sap.m.App("myNewsApp", {
+	//initialPage : "News Page",
+	//BackgroundColor: "green",
+});
+
+appNews.addPage(newsPage);
+appNews.placeAt("contentsecond");
 
 //newsPage.placeAt("contentsecond");
