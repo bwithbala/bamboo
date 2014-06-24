@@ -1,6 +1,17 @@
 
 alert("Adding News Page");
 
+var butBack = new sap.m.Button({
+	text : "Back",
+	type: "Reject",
+	press : function(e) {
+		newsPage.removeAllContent();
+		appFeedList.back();
+	}
+});
+
+
+
 var newsPage = new sap.m.Page("newsPage", {
 	title:" ",
 	showNavButton: true,
@@ -18,10 +29,14 @@ var newsPage = new sap.m.Page("newsPage", {
 		id: 'newsPage-footer',
 		contentLeft: [ butBack ]
 	})
-}).addEventDelegate({
+});
+
+
+
+/*addEventDelegate({
 	onBeforeShow: function(evt) {
 		jQuery.sap.log.info("page 2 is going to be shown (dir: " + evt.direction + ")");
-		 /*newsLink = "From page 1: " + evt.data.payloadInfo;*/
+		 newsLink = "From page 1: " + evt.data.payloadInfo;
 		newsLink = evt.data.payloadInfo;
 		if (evt.isBack) {
 			newsLink += ", from page 3: " + evt.backData.myBackPayload;
@@ -29,7 +44,7 @@ var newsPage = new sap.m.Page("newsPage", {
 		//alert("Link Passed from Page 1:" + newsLink);
 		//sap.m.URLHelper.redirect(newsLink,true);
 	}
-});
+}); */
 
 
 appFeedList.addPage(newsPage);
