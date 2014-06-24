@@ -1,3 +1,6 @@
+
+var selectedItem;
+
 var selectedNews = "http://www.maalaimalar.com/RSS/SectionRssFeed.aspx?Id=1&Main=18";
 
 
@@ -77,6 +80,7 @@ var oFeedList = new sap.m.List("oFeedItemList", {
 	BackgroundDesign: sap.m.BackgroundDesign.Translucent,
 	select: function(event){
 	     	var selectedInfo = event.getParameter('listItem').getInfo();
+	     	 selectedItem = selectedInfo ;
 	     	
 	     	window.location.replace("newsPage.html");
 

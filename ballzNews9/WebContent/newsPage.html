@@ -16,16 +16,28 @@
 
 	<meta name="viewport" content="initial-scale=1, maximum-scale=1" />
 	<meta name="apple-mobile-web-app-capable" content="yes" />
+	
+	<script src="https://sapui5.hana.ondemand.com/resources/sap-ui-core.js"
+		id="sap-ui-bootstrap" 
+		data-sap-ui-libs="sap.m,sap.ui.commons"
+		data-sap-ui-theme="sap_bluecrystal">
+	</script>	
+	<script src="js/tile.js"></script>	
+	
 </head>
 
  <script>
-	 function backToMain() {
-	        window.location.replace("index.html");
-	 }		
+ 
+      var backButton = new sap.m.Button({text:"Back", type:sap.m.ButtonType.Back,
+    	  press: function{
+    		  window.location.replace("index.html");
+    	  }});
+      backButton.placeAt(backButton);
+ 
+	
 </script>
 <body class="sapUiBody" role="application">
-
-<button type="button" onclick="backToMain()">Back!</button>
+<div id="backButton"></div>
 <iframe src="http://www.maalaimalar.com" width="300" height="500"></iframe>
 </body>
 </html>	
