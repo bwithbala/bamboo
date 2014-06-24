@@ -77,10 +77,12 @@ var oFeedList = new sap.m.List("oFeedItemList", {
 	BackgroundDesign: sap.m.BackgroundDesign.Translucent,
 	select: function(event){
 	     	var selectedInfo = event.getParameter('listItem').getInfo();
+	     	
+	     	window.location.replace("newsPage.html");
 
 	     //	sap.m.URLHelper.redirect(selectedInfo);
 	     	
-	     	 appFeedList.to("newsPage", {payloadInfo:selectedInfo});
+/*	     	 appFeedList.to("newsPage", {payloadInfo:selectedInfo});
 	     	 
 	     	var str = "'";
      		var link = str.concat(selectedInfo); 
@@ -89,7 +91,6 @@ var oFeedList = new sap.m.List("oFeedItemList", {
        		var HtmlIFrame = new sap.ui.core.HTML({
      			  preferDOM: true,
     			  content:
-    			         
     				 "<div style='overflow: scroll'>" + 
       	    "<object type=\"text/html\" data=\"http://www.maalaimalar.com\" width=\"300px\" height=\"300px\"" +
       	    	"style=\"overflow: scroll;border:0px \">" +
@@ -104,7 +105,7 @@ var oFeedList = new sap.m.List("oFeedItemList", {
 				width: "400px"
 			}); 	     	 
 	     	 
-	     	newsPage.addContent(scr1);
+	     	newsPage.addContent(scr1);*/
 
  /*       		var str = "'";
         		var link = str.concat(selectedInfo); 
@@ -434,10 +435,15 @@ var feedListPage = new sap.m.Page("feedListPage", {
 	enableScrolling : true
 });
 
+
+
 Bar.placeAt("Bar");
 //feedListPage.setCustomHeader(Bar); 
 //feedListPage.addContent(busyCSSSize2);
 feedListPage.addContent(oFeedList);
+
+feedListPage.placeAt("content");
+
 
 var newsLink;
 
@@ -451,7 +457,7 @@ var butBack = new sap.m.Button({
 });
 
 
-var newsPage = new sap.m.Page("newsPage", {
+/*var newsPage = new sap.m.Page("newsPage", {
 	title:" ",
 	showNavButton: true,
 	showHeader : false,
@@ -471,7 +477,7 @@ var newsPage = new sap.m.Page("newsPage", {
 }).addEventDelegate({
 	onBeforeShow: function(evt) {
 		jQuery.sap.log.info("page 2 is going to be shown (dir: " + evt.direction + ")");
-		 /*newsLink = "From page 1: " + evt.data.payloadInfo;*/
+		 newsLink = "From page 1: " + evt.data.payloadInfo;
 		newsLink = evt.data.payloadInfo;
 		if (evt.isBack) {
 			newsLink += ", from page 3: " + evt.backData.myBackPayload;
@@ -481,5 +487,7 @@ var newsPage = new sap.m.Page("newsPage", {
 	}
 });
 
-appFeedList.addPage(feedListPage).addPage(newsPage);
-appFeedList.placeAt("content");
+newsPage.placeAt("contentsecond");*/
+
+//appFeedList.addPage(feedListPage).addPage(newsPage);
+//appFeedList.placeAt("content");
