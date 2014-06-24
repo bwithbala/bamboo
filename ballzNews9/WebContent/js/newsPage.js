@@ -33,6 +33,6 @@ var newsPage = new sap.m.Page("newsPage", {
 
 
 appFeedList.addPage(newsPage);
-appFeedList.placeAt("contentsecond");
+appFeedList.placeAt("content");
 
 //newsPage.placeAt("contentsecond");
