@@ -16,12 +16,16 @@
 
 	<meta name="viewport" content="initial-scale=1, maximum-scale=1" />
 	<meta name="apple-mobile-web-app-capable" content="yes" />
-
 </head>
 
+ <script>
+	 function backToMain() {
+	        window.location.replace("index.html");
+	 }		
+</script>
 <body class="sapUiBody" role="application">
 
-<button type="button" onclick="appFeedList.back();">Back!</button>
-<iframe src="http://www.maalaimalar.com" width="400" height="600"></iframe>
+<button type="button" onclick="backToMain()">Back!</button>
+<iframe src="http://www.maalaimalar.com" width="300" height="500"></iframe>
 </body>
 </html>	
