@@ -33,11 +33,15 @@
     		  window.location.replace("index.html");
     	  }});
       backButton.placeAt(backButton);
+      
+      var iframe = document.getElementByName("iframe_a");
+      iframe.src = 'http://www.maalaimalar.com';
+      
  
 	
 </script>
 <body class="sapUiBody" role="application">
 <div id="backButton"></div>
-<iframe src="http://www.maalaimalar.com" width="300" height="500"></iframe>
+<iframe name="iframe_a" width="300" height="500"></iframe>
 </body>
 </html>	
