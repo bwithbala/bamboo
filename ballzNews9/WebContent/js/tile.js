@@ -1,4 +1,5 @@
 
+alert("Loading Tile js");
 var selectedItem;
 
 var selectedNews = "http://www.maalaimalar.com/RSS/SectionRssFeed.aspx?Id=1&Main=18";
