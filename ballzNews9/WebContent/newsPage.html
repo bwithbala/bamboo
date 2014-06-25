@@ -23,17 +23,20 @@
 		data-sap-ui-theme="sap_bluecrystal">
 	</script>	
 	
-</head>
-
  <script>
  
- var backButton = new sap.m.Button({text:"Back", type:sap.m.ButtonType.Back,
-	  press: function{
-		  window.location.replace("index.html");
-	  }});
- backButton.placeAt("backButton");
+	 var backButton = new sap.m.Button({text:"Back", type:sap.m.ButtonType.Back,
+		  press: function{
+			  window.location.replace("index.html");
+		  }});
+	 backButton.placeAt("backButton");
 
-</script>
+</script>	
+	
+	
+</head>
+
+
 
 <body class="sapUiBody" role="application">
  <div id="backButton"></div>
