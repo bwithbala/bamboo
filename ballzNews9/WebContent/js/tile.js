@@ -82,6 +82,7 @@ var oFeedList = new sap.m.List("oFeedItemList", {
 	select: function(event){
 	     	var selectedInfo = event.getParameter('listItem').getInfo();
 	     	 selectedItem = selectedInfo ;
+	     	alert("selectedItem" +selectedItem);
 	     	
 	     	window.location.replace("newsPage.html");
 
