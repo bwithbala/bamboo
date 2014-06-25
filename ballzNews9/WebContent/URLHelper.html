@@ -57,11 +57,14 @@ var butWebsite = new sap.m.Button({
 
 
 
-var backButton = new sap.m.Button({text:"Back", type:sap.m.ButtonType.Back,
-	  press: function{
-		  window.location.replace("index.html");
-	  }});
-//backButton.placeAt("back");
+var butBack = new sap.m.Button({
+    text : "Back",
+    icon : sap.ui.core.IconPool.getIconURI("phone"),
+    tap : function() {
+    	 window.location.replace("index.html");
+    }
+});
+
 
 var appFeedList = new sap.m.App("myApp", {
 	initialPage : "feedListPage",
@@ -75,14 +78,13 @@ var feedListPage = new sap.m.Page("feedListPage", {
 });
 
 
- feedListPage.addContent(backButton);
+ feedListPage.addContent(butBack);
 /*feedListPage.addContent(butEmail);
 feedListPage.addContent(butSms);
 feedListPage.addContent(butWebsite); */
 
 appFeedList.addPage(feedListPage);
 appFeedList.placeAt("content");
-
 
 
 </script>
