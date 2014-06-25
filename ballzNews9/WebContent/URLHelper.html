@@ -55,24 +55,37 @@ var butWebsite = new sap.m.Button({
     }
 });
 
+
+
+var backButton = new sap.m.Button({text:"Back", type:sap.m.ButtonType.Back,
+	  press: function{
+		  window.location.replace("index.html");
+	  }});
+//backButton.placeAt("back");
+
 var appFeedList = new sap.m.App("myApp", {
 	initialPage : "feedListPage",
 	//BackgroundColor: "green",
 });
 
 var feedListPage = new sap.m.Page("feedListPage", {
-	title : "Ballz News",
+	title : "",
+	showHeader : false,
 	BackgroundDesign: sap.m.BackgroundDesign.Translucent
 });
 
 
-feedListPage.addContent(butTelePhone);
-feedListPage.addContent(butEmail);
+ feedListPage.addContent(backButton);
+/*feedListPage.addContent(butEmail);
 feedListPage.addContent(butSms);
-feedListPage.addContent(butWebsite);
+feedListPage.addContent(butWebsite); */
 
 appFeedList.addPage(feedListPage);
 appFeedList.placeAt("content");
+
+  var iframe = document.createElement('iframe');
+  iframe.src = 'http://www.maalaimalar.com';
+  document.body.appendChild(iframe);
 
 </script>
 
