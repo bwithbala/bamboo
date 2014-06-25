@@ -20,20 +20,21 @@
 <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.css">
 <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
 <script src="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.js"></script>	
+<script src="js/tile.js"></script>	
 	
 
  <script>
-	 var iframe = document.getElementById('iframeID');
-	 iframe = (iframe.contentWindow) ? iframe.contentWindow : (iframe.contentDocument.document) ? iframe.contentDocument.document : iframe.contentDocument;
-	 iframe.document.open();
-	 iframe.document.write('http://www.maalaimalar.com');
-	 iframe.document.close();	 
+ 
+ var url = "http://www.maalaimalar.com";
  
      function back()
 	 {
 		 window.location.replace("index.html");
 	 }	 
-	 
+	
+
+
+     
 
 </script>	
 	
@@ -41,9 +42,24 @@
 
 <body>
   <button id="btn" onclick="back()">Back</button>
-  <iframe id="iframeID">
-  
-  </iframe>
+<div id="container"></div>
+<div id="iframe-holder">
+  <iframe src="" id="frame"></iframe>
+</div>
+
+<script>
+var url = selectedItem;
+alert("Selected Item:" +selectedItem);
+holder = document.getElementById('iframe-holder'),
+frame = holder.getElementsByTagName('iframe')[0];
+frame.style.display = "block";
+frame.style.width = "500px";
+frame.style.height = "500px";
+frame.src = url;
+document.getElementById('container').insertBefore(holder, null);
+
+</script>
+
 </body>
 
 </html>	
