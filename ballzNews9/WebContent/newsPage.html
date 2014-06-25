@@ -23,23 +23,16 @@
 	
 
  <script>
-	 
-	$(function() {
-		var $frame = $('<iframe style="width:200px; height:100px;">');
-		$('body').html( $frame );
-		setTimeout( function() {
-			var doc = $frame[0].contentWindow.document;
-			var $body = $('body',doc);
-			$body.html('<h1>Test</h1>');
-		}, 1 );
-	});
+	 var iframe = document.getElementById('iframeID');
+	 iframe = (iframe.contentWindow) ? iframe.contentWindow : (iframe.contentDocument.document) ? iframe.contentDocument.document : iframe.contentDocument;
+	 iframe.document.open();
+	 iframe.document.write('http://www.maalaimalar.com');
+	 iframe.document.close();	 
  
- 
-    function back()
+     function back()
 	 {
 		 window.location.replace("index.html");
 	 }	 
-	 
 	 
 
 </script>	
@@ -48,6 +41,9 @@
 
 <body>
   <button id="btn" onclick="back()">Back</button>
+  <iframe id="iframeID">
+  
+  </iframe>
 </body>
 
 </html>	
